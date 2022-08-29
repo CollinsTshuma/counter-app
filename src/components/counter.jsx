@@ -13,6 +13,14 @@ class Counter extends Component {
     return count === 0 ? "zero" : count;
   }
 
+  componentDidUpdate(prevProps, prevState){
+    console.log('prevProps', prevProps);
+    console.log('prevState', prevState);
+    if(prevProps.counter.value !== this.props.counter.value){
+      // Ajax call and get new data from  server
+    }
+  }
+
   render() {
     console.log('Counter-rendered');
     return (
